@@ -10,6 +10,94 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="upper-header">
+        <h2>Web Topics</h2>
+        <nav>
+          <ul>
+            <li><ion-icon name="moon-outline"></ion-icon></li>
+            <li><ion-icon name="heart-outline"></ion-icon></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="bottom-header">
+        <div class="complex-style">
+          <div id="brand-left"></div>
+          <div id="brand-right"></div>
+        </div>
+        <h1>Welcome to our website!</h1>
+        <h2>We have a new design that's fresh, modern, and easy to use.</h2>
+      </div>
+    </header>
+    <main>
+      <search>
+        <div class="search-input">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="search" id="site-name-search" name="site-name-search" />
+        </div>
+        <div class="filter">
+          <div class="sort-by infilter">
+            <p>Sort by:</p>
+            <input
+              list="browsers"
+              name="browser"
+              id="browser"
+              value="Default"
+            />
+
+            <datalist id="browsers">
+              <option value="Default"></option>
+              <option value="Sort1"></option>
+              <option value="Sort2"></option>
+              <option value="Sort3"></option>
+              <option value="Sort4"></option>
+            </datalist>
+          </div>
+          <div class="filter-by infilter">
+            <p>Filter by:</p>
+            <input
+              list="browsers"
+              name="browser"
+              id="browser"
+              value="Default"
+            />
+
+            <datalist id="browsers">
+              <option value="Default"></option>
+              <option value="Sort1"></option>
+              <option value="Sort2"></option>
+              <option value="Sort3"></option>
+              <option value="Sort4"></option>
+            </datalist>
+          </div>
+        </div>
+      </search>
+      <div class="results">
+        <h1>"24" Web Topics Found</h1>
+        <div class="result">
+          <img src="/Logos/html.png" alt="HTML" />
+          <p>Web Development Languages</p>
+          <h3>HTML</h3>
+          <br />
+          <div class="rate">
+            <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon
+            ><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </div>
+          <div class="auther">Author: Sarah Smith</div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
