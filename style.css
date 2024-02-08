@@ -14,19 +14,126 @@
   --dark-body-text: #ededed;
   --dark-heart-color: #dc143c;
 }
+
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans";
   display: grid;
   grid-template-columns: 100vw;
+  margin: 0;
+  justify-items: center;
 }
 .header {
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 6vh 8vh;
+  background-color: var(--bg_body);
 }
 img {
   width: 400px;
 }
+.upper-header {
+  display: grid;
+  grid-template-columns: 40vw 32vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.upper-header h2 {
+  color: var(--brand-primary);
+  margin-left: 3vw;
+}
+.upper-header button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: large;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.bottom-header h1 {
+  color: var(--brand-secondary);
+  font-weight: 800;
+  margin-left: 1vw;
+  margin-bottom: 0px;
+}
+.bottom-header h3 {
+  font-weight: 400;
+  margin: 0px;
 
+  margin-left: 1vw;
+}
+main {
+  background-color: rgba(7, 104, 172, 0.15);
+  margin-top: 25px;
+  width: 100vw;
+}
 @media only screen and (max-width: 768px) {
+  .upper-header nav {
+    display: grid;
+    grid-template-columns: 12.5vw 12.5vw;
+    grid-template-rows: 35px;
+    justify-content: space-around;
+    margin-right: 5vw;
+  }
+  .complex-style {
+    height: 1.5vh;
+  }
+  #brand-left {
+    height: 0;
+    width: 0;
+    position: absolute;
+    left: 0;
+    border-top: 0 solid transparent;
+    border-left: 80vw solid;
+    border-left-color: var(--brand-primary);
+    border-bottom: 3vh solid transparent;
+  }
+  #brand-right {
+    height: 0;
+    position: absolute;
+    width: 0;
+    left: 20vw;
+    z-index: -1;
+    border-top: 0 solid transparent;
+    border-right: 80vw solid var(--brand-secondary);
+    border-bottom: 3vh solid transparent;
+  }
+  .title {
+    width: 93vw;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 90vw;
+    justify-content: center;
+  }
+  search {
+    display: grid;
+    grid-template-columns: 90vw;
+    justify-items: center;
+    background-color: var(--bg_default);
+    margin-top: 25px;
+    border-radius: 15px;
+    height: 12vh;
+  }
+  .filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .search-input {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 8vw 81vw;
+    justify-items: center;
+    align-items: center;
+  }
+  #site-name-search {
+    width: 81vw;
+    border: 0;
+    height: 30px;
+  }
+  [placeholder] {
+    font-size: large;
+  }
 }
