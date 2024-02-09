@@ -53,38 +53,29 @@
         </div>
         <div class="filter">
           <div class="sort-by infilter">
-            <p>Sort by:</p>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              value="Default"
-            />
+            <div class="select">
+              <p>Sort by:</p>
 
-            <datalist id="browsers">
-              <option value="Default"></option>
-              <option value="Sort1"></option>
-              <option value="Sort2"></option>
-              <option value="Sort3"></option>
-              <option value="Sort4"></option>
-            </datalist>
+              <select name="browsers" class="browsers">
+                <option value="Default">Default</option>
+                <option value="Sort2">Sort2</option>
+                <option value="Sort3">Sort3</option>
+                <option value="Sort4">Sort4</option>
+              </select>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
           </div>
           <div class="filter-by infilter">
-            <p>Filter by:</p>
-            <input
-              list="browsers"
-              name="browser"
-              id="browser"
-              value="Default"
-            />
-
-            <datalist id="browsers">
-              <option value="Default"></option>
-              <option value="Sort1"></option>
-              <option value="Sort2"></option>
-              <option value="Sort3"></option>
-              <option value="Sort4"></option>
-            </datalist>
+            <div class="select">
+              <p>Filter by:</p>
+              <select name="browsers" class="browsers">
+                <option value="Default">Default</option>
+                <option value="Sort2">Sort2</option>
+                <option value="Sort3">Sort3</option>
+                <option value="Sort4">Sort4</option>
+              </select>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
           </div>
         </div>
       </search>
