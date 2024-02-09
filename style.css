@@ -13,6 +13,7 @@
   --dark-lines-color: #000000;
   --dark-body-text: #ededed;
   --dark-heart-color: #dc143c;
+  --star-color: #d69916;
 }
 
 body {
@@ -31,10 +32,12 @@ body {
   background-color: var(--bg_body);
 }
 img {
-  width: 400px;
+  width: 90vw;
+  height: 250px;
 }
 .upper-header {
   display: grid;
+  width: 100vw;
   grid-template-columns: 40vw 32vw;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +51,7 @@ img {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  width: 60px;
   font-size: large;
   display: grid;
   align-items: center;
@@ -72,22 +76,58 @@ main {
 }
 .result {
   background-color: var(--bg_default);
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 15px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border-radius: 10px;
   display: grid;
+  grid-template-rows: 255px 25px 30px 40px 25px 25px;
   justify-items: center;
+  align-items: center;
+
+  height: 450px;
+}
+.result p,
+h3,
+.rate,
+.auther {
+  width: 82vw;
+}
+.result p,
+h3 {
+  margin: 0;
+}
+.result p {
+  margin-top: 15px;
 }
 .browsers {
   appearance: none;
+}
+.result .rate {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+}
+.result .rate ion-icon {
+  font-size: 20px;
+  color: var(--star-color);
+}
+
+.result .auther {
+  margin-top: 40px;
+  font-size: medium;
+  color: rgba(51, 51, 51, 0.7);
+  font-weight: 500;
+}
+[placeholder] {
+  font-size: large;
 }
 @media only screen and (max-width: 768px) {
   .upper-header nav {
     display: grid;
     grid-template-columns: 12.5vw 12.5vw;
     grid-template-rows: 35px;
-    justify-content: space-around;
+    justify-content: end;
     margin-right: 5vw;
+    width: 32vw;
   }
   .complex-style {
     height: 1.5vh;
@@ -113,7 +153,9 @@ main {
     border-bottom: 3vh solid transparent;
   }
   .title {
-    width: 93vw;
+    width: 90vw;
+    display: grid;
+    justify-content: center;
   }
   main {
     display: grid;
@@ -130,7 +172,7 @@ main {
   }
 
   .search-input {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid var(--lines-color);
     width: 90vw;
     height: 60px;
     display: grid;
@@ -143,9 +185,7 @@ main {
     border: 0;
     height: 30px;
   }
-  [placeholder] {
-    font-size: large;
-  }
+
   .filter {
     display: grid;
     grid-template-columns: 45vw 45vw;
