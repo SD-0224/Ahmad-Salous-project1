@@ -38,7 +38,8 @@ img {
 .upper-header {
   display: grid;
   width: 100vw;
-  grid-template-columns: 40vw 32vw;
+  height: 100px;
+  grid-template-columns: 150px 160px;
   justify-content: space-between;
   align-items: center;
 }
@@ -51,7 +52,8 @@ img {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  width: 60px;
+  width: 50px;
+  height: 40px;
   font-size: large;
   display: grid;
   align-items: center;
@@ -108,7 +110,7 @@ h3 {
 }
 .result .rate ion-icon {
   font-size: 20px;
-  color: var(--star-color);
+  color: var(--star-colo);
 }
 
 .result .auther {
@@ -120,14 +122,20 @@ h3 {
 [placeholder] {
   font-size: large;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (width >= 0px) and (width <= 961px) {
+  .hidden-words {
+    display: none;
+  }
   .upper-header nav {
     display: grid;
-    grid-template-columns: 12.5vw 12.5vw;
+    grid-template-columns: 50px 50px;
     grid-template-rows: 35px;
-    justify-content: end;
     margin-right: 5vw;
-    width: 32vw;
+    width: 130px;
+    gap: 10px;
+  }
+  .upper-header ion-icon {
+    font-size: 20px;
   }
   .complex-style {
     height: 1.5vh;
@@ -140,7 +148,7 @@ h3 {
     border-top: 0 solid transparent;
     border-left: 80vw solid;
     border-left-color: var(--brand-primary);
-    border-bottom: 3vh solid transparent;
+    border-bottom: 35px solid transparent;
   }
   #brand-right {
     height: 0;
@@ -150,7 +158,7 @@ h3 {
     z-index: -1;
     border-top: 0 solid transparent;
     border-right: 80vw solid var(--brand-secondary);
-    border-bottom: 3vh solid transparent;
+    border-bottom: 35px solid transparent;
   }
   .title {
     width: 90vw;
@@ -220,5 +228,8 @@ h3 {
     font-size: 18px;
     font-weight: 100;
     color: var(--body-text);
+  }
+  .upper-header nav p {
+    display: none;
   }
 }

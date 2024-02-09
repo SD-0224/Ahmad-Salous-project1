@@ -18,15 +18,23 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylePc.css" />
   </head>
   <body>
     <header>
       <div class="upper-header">
         <h2>Web Topics</h2>
         <nav>
-          <button><ion-icon name="moon-outline"></ion-icon></button>
-          <button><ion-icon name="heart-outline"></ion-icon></button>
+          <button>
+            <ion-icon name="moon-outline"></ion-icon>
+            <p class="hidden-words">Dark Mode</p>
+          </button>
+          <button>
+            <ion-icon name="heart-outline"></ion-icon>
+            <p class="hidden-words">Favorites</p>
+          </button>
         </nav>
       </div>
       <div class="bottom-header">
