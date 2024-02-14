@@ -1,0 +1,123 @@
+:root {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+  --dark-brand-primary: #0768ac;
+  --dark-brand-secondary: #03c180;
+  --dark-bg_default: #1a1a1a;
+  --dark-bg_body: #282828;
+  --dark-lines-color: #000000;
+  --dark-body-text: #ededed;
+  --dark-heart-color: #dc143c;
+  --star-color: #d69916;
+}
+body {
+  height: 100vh;
+}
+main {
+  display: grid;
+  height: auto;
+  justify-items: center;
+  grid-template-columns: 100vw;
+}
+article {
+  display: grid;
+}
+.upper-detail {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 40vw 20vw;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--body-text);
+  color: var(--bg_body);
+  max-height: 380px;
+}
+
+.left-detail {
+  padding: 40px;
+  display: grid;
+  grid-template-rows: 30px 37px 22px 220px;
+}
+.left-detail p {
+  margin: 0;
+}
+#title {
+  font-size: 20px;
+  color: var(--brand-secondary);
+}
+#big-title {
+  font-size: xx-large;
+  font-weight: 600;
+  margin: 0;
+}
+.rate ion-icon {
+  font-size: 20px;
+  color: var(--star-color);
+}
+.rate {
+  display: grid;
+  align-items: center;
+
+  grid-template-columns: 20px 20px 20px 20px 20px;
+}
+#more-details {
+  display: grid;
+  align-content: center;
+}
+#more-details p {
+  font-size: 20px;
+}
+aside {
+  display: grid;
+  margin-top: 40px;
+  justify-content: center;
+  grid-template-columns: 20vw;
+  background-color: var(--bg_default);
+  color: var(--body-text);
+}
+img {
+  max-width: 20vw;
+}
+#image-info {
+  height: 290px;
+  padding-left: 1vw;
+}
+#image-info > p {
+  font-size: 20px;
+}
+#add-to-favorites {
+  display: grid;
+  border: 1px solid var(--lines-color);
+  width: 18vw;
+  height: 200px;
+  justify-content: center;
+}
+#add-to-favorites > #interested {
+  font-size: 20px;
+  font-weight: 600;
+  width: 12vw;
+}
+#hiden-p {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+#add-to-favorites > button {
+  background-color: var(--brand-secondary);
+  color: var(--bg_body);
+  height: 70px;
+  font-size: 28px;
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: 11vw 3vw;
+  align-items: center;
+  justify-items: center;
+}
+#add-to-favorites > button > ion-icon {
+  font-size: 43px;
+}
