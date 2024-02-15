@@ -130,24 +130,49 @@
 
 @media only screen and (min-width: 962px) {
   #brand-left {
-    height: 0;
-    width: 0;
+    height: 100px;
+    width: 85vw;
     position: absolute;
+
     left: 0;
-    border-top: 0 solid transparent;
-    border-left: 80vw solid;
-    border-left-color: var(--brand-primary);
-    border-bottom: 90px solid transparent;
+
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+    /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=03c180&c2=0869ac&gt=l&gd=dcr
+  */
+    /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=03a28d&c2=076baa&gt=l&gd=dcr
+  */
+
+    background: linear-gradient(
+      270deg,
+      rgba(3, 162, 141, 1),
+      rgba(7, 107, 170, 1)
+    );
   }
   #brand-right {
-    height: 0;
+    height: 100px;
     position: absolute;
-    width: 0;
-    left: 20vw;
+    width: 85vw;
+    left: 15vw;
+
     z-index: -1;
-    border-top: 0 solid transparent;
-    border-right: 80vw solid var(--brand-secondary);
-    border-bottom: 90px solid transparent;
+
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    /* background-color: #03c180; */
+
+    /*
+  * Created with https://www.css-gradient.com
+  * Gradient link: https://www.css-gradient.com/?c1=03c180&c2=03c181&gt=l&gd=dcl
+  */
+
+    background: linear-gradient(
+      90deg,
+      rgba(3, 193, 128, 1),
+      rgba(3, 193, 129, 1)
+    );
   }
   .bottom-header {
     display: grid;
