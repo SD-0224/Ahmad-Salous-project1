@@ -248,9 +248,7 @@ footer p {
   /* #more-details {
     display: none;
   } */
-  .left-detail {
-    grid-template-rows: 30px 37px 22px 400px;
-  }
+
   /* .upper-detail .left-detail {
     height: 100px;
   } */
