@@ -141,7 +141,7 @@ h3 {
     height: 1.5vh;
   }
   #brand-left {
-    height: 100px;
+    height: 40px;
     width: 85vw;
     position: absolute;
 
@@ -156,7 +156,7 @@ h3 {
     );
   }
   #brand-right {
-    height: 100px;
+    height: 40px;
     position: absolute;
     width: 85vw;
     left: 15vw;
