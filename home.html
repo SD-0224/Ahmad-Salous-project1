@@ -26,11 +26,11 @@
       <div class="upper-header">
         <h3>Web Topics</h3>
         <nav>
-          <button>
+          <button id="dark-mode-switch">
             <ion-icon name="moon-outline"></ion-icon>
             <p class="hidden-words">Dark Mode</p>
           </button>
-          <button>
+          <button id="get-favorites">
             <ion-icon name="heart-outline"></ion-icon>
             <p class="hidden-words">Favorites</p>
           </button>
@@ -367,5 +367,79 @@
     <div id="year-of-develope">
       Developed with <ion-icon name="heart"></ion-icon> © 2024
     </div>
+    <div class="favorites">
+      <h3>My Favorite Topics</h3>
+      <div class="favorites-cards">
+        <div class="small-card">
+          <img src="./Logos/react.webp" alt="react" />
+          <div class="small-cards-info">
+            <h3>React</h3>
+            <div class="rate">
+              <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon
+              ><ion-icon name="star"></ion-icon
+              ><ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="small-card">
+          <img src="./Logos/cloud.jpeg" alt="cloud" />
+          <div class="small-cards-info">
+            <div class="small-cards-info">
+              <h3>Cloud Computing</h3>
+              <div class="rate">
+                <ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    let flag = 0;
+    document
+      .getElementById("dark-mode-switch")
+      .addEventListener("click", () => {
+        if (flag === 0) {
+          document.documentElement.style.setProperty(
+            "--brand-primary",
+            "#0768ac"
+          );
+          document.documentElement.style.setProperty(
+            "--brand-secondary",
+            "#03c180"
+          );
+          document.documentElement.style.setProperty("--bg_default", "#1a1a1a");
+          document.documentElement.style.setProperty("--bg_body", "#282828");
+          document.documentElement.style.setProperty(
+            "--lines-color",
+            "#000000"
+          );
+          document.documentElement.style.setProperty("--body-text", "#ededed");
+          flag = 1;
+        } else if (flag === 1) {
+          document.documentElement.style.setProperty(
+            "--brand-primary",
+            "#0768ac"
+          );
+          document.documentElement.style.setProperty(
+            "--brand-secondary",
+            "#03c180"
+          );
+          document.documentElement.style.setProperty("--bg_default", "#ffffff");
+          document.documentElement.style.setProperty("--bg_body", "#f0f9ff");
+          document.documentElement.style.setProperty(
+            "--lines-color",
+            "#dddddd"
+          );
+          document.documentElement.style.setProperty("--body-text", "#333333");
+          flag = 0;
+        }
+      });
+  </script>
 </html>

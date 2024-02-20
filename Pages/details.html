@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../stylePc.css" />
+    <link rel="stylesheet" href="../home.css" />
     <link rel="stylesheet" href="details.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap"
@@ -23,13 +22,13 @@
   <body>
     <header>
       <div class="upper-header">
-        <h2>Web Topics</h2>
+        <h3>Web Topics</h3>
         <nav>
-          <button>
+          <button id="dark-mode-switch">
             <ion-icon name="moon-outline"></ion-icon>
             <p class="hidden-words">Dark Mode</p>
           </button>
-          <button>
+          <button id="get-favorites">
             <ion-icon name="heart-outline"></ion-icon>
             <p class="hidden-words">Favorites</p>
           </button>
@@ -41,7 +40,7 @@
           <div id="brand-right"></div>
         </div>
         <div class="title">
-          <h1>Welcome to our website!</h1>
+          <h2>Welcome to our website!</h2>
           <h3>We have a new design that's fresh, modern, and easy to use.</h3>
         </div>
       </div>
@@ -115,11 +114,53 @@
               <p>HTML accessibility and semantic markup</p>
             </div>
           </div>
-          <footer>
-            <p>Developed with <ion-icon name="heart"></ion-icon> © 2024</p>
-          </footer>
         </div>
       </article>
+      <div id="year-of-develope">
+        Developed with <ion-icon name="heart"></ion-icon> © 2024
+      </div>
     </main>
   </body>
+  <script>
+    let flag = 0;
+    document
+      .getElementById("dark-mode-switch")
+      .addEventListener("click", () => {
+        if (flag === 0) {
+          document.documentElement.style.setProperty(
+            "--brand-primary",
+            "#0768ac"
+          );
+          document.documentElement.style.setProperty(
+            "--brand-secondary",
+            "#03c180"
+          );
+          document.documentElement.style.setProperty("--bg_default", "#1a1a1a");
+          document.documentElement.style.setProperty("--bg_body", "#282828");
+          document.documentElement.style.setProperty(
+            "--lines-color",
+            "#000000"
+          );
+          document.documentElement.style.setProperty("--body-text", "#ededed");
+          flag = 1;
+        } else if (flag === 1) {
+          document.documentElement.style.setProperty(
+            "--brand-primary",
+            "#0768ac"
+          );
+          document.documentElement.style.setProperty(
+            "--brand-primary",
+            "#03c180"
+          );
+          document.documentElement.style.setProperty("--bg_default", "#ffffff");
+          document.documentElement.style.setProperty("--bg_body", "#f0f9ff");
+          document.documentElement.style.setProperty(
+            "--lines-color",
+            "#dddddd"
+          );
+          document.documentElement.style.setProperty("--body-text", "#333333");
+          flag = 0;
+        }
+      });
+  </script>
 </html>

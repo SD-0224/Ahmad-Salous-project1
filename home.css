@@ -131,6 +131,7 @@ search {
   height: 40px;
   border: 0;
   font-size: large;
+  background-color: var(--bg_default);
 }
 .search-input ion-icon {
   width: 22px;
@@ -160,6 +161,7 @@ select {
   border: none;
   font-size: 15px;
   font-weight: 500;
+  background-color: var(--bg_default);
 }
 .select-info {
   display: flex;
@@ -243,9 +245,61 @@ a:active {
   font-weight: 600;
 }
 #year-of-develope ion-icon {
-  color: #db143b;
+  color: var(--heart-color);
   font-size: 25px;
   padding: 0px 2px 0px 2px;
+}
+.favorites {
+  position: absolute;
+  width: 100vw;
+  background-color: var(--bg_default);
+  flex-direction: column;
+  align-items: center;
+}
+.favorites h3,
+.favorites-cards {
+  padding: 30px;
+}
+.favorites > h3 {
+  width: 90vw;
+  font-weight: 700;
+  text-align: start;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.favorites-cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  gap: 20px;
+}
+.small-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  border: 1px solid var(--lines-color);
+  border-radius: 5px;
+  height: 120px;
+}
+.small-card img {
+  width: 118px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px 5px 0px 0px;
+}
+.small-cards-info h3 {
+  margin: 0;
+  padding: 5px;
+  width: 116px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+}
+.small-cards-info .rate {
+  padding: 5px;
+  padding-top: 0;
 }
 @media only screen and (max-width: 576px) {
   .hidden-words {
