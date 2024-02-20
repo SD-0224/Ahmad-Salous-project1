@@ -120,13 +120,55 @@
         Developed with <ion-icon name="heart"></ion-icon> © 2024
       </div>
     </main>
+    <div id="favorites">
+      <h3>My Favorite Topics</h3>
+      <div class="favorites-cards">
+        <div class="small-card">
+          <img src="../Logos/react.webp" alt="react" />
+          <div class="small-cards-info">
+            <h3>React</h3>
+            <div class="rate">
+              <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon
+              ><ion-icon name="star"></ion-icon
+              ><ion-icon name="star"></ion-icon>
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <div class="small-card">
+          <img src="../Logos/cloud.jpeg" alt="cloud" />
+          <div class="small-cards-info">
+            <div class="small-cards-info">
+              <h3>Cloud Computing</h3>
+              <div class="rate">
+                <ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon
+                ><ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script>
-    let flag = 0;
+    let favoritesSwitch = 1;
+    document.getElementById("get-favorites").addEventListener("click", () => {
+      if (favoritesSwitch === 0) {
+        document.getElementById("favorites").style.display = "none";
+        favoritesSwitch = 1;
+      } else if (favoritesSwitch === 1) {
+        document.getElementById("favorites").style.display = "flex";
+        favoritesSwitch = 0;
+      }
+    });
+    let darkSwitchFlag = 0;
     document
       .getElementById("dark-mode-switch")
       .addEventListener("click", () => {
-        if (flag === 0) {
+        if (darkSwitchFlag === 0) {
           document.documentElement.style.setProperty(
             "--brand-primary",
             "#0768ac"
@@ -142,14 +184,14 @@
             "#000000"
           );
           document.documentElement.style.setProperty("--body-text", "#ededed");
-          flag = 1;
-        } else if (flag === 1) {
+          darkSwitchFlag = 1;
+        } else if (darkSwitchFlag === 1) {
           document.documentElement.style.setProperty(
             "--brand-primary",
             "#0768ac"
           );
           document.documentElement.style.setProperty(
-            "--brand-primary",
+            "--brand-secondary",
             "#03c180"
           );
           document.documentElement.style.setProperty("--bg_default", "#ffffff");
@@ -159,7 +201,7 @@
             "#dddddd"
           );
           document.documentElement.style.setProperty("--body-text", "#333333");
-          flag = 0;
+          darkSwitchFlag = 0;
         }
       });
   </script>

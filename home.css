@@ -249,29 +249,32 @@ a:active {
   font-size: 25px;
   padding: 0px 2px 0px 2px;
 }
-.favorites {
-  position: absolute;
+#favorites {
+  display: none;
   width: 100vw;
   background-color: var(--bg_default);
   flex-direction: column;
   align-items: center;
 }
-.favorites h3,
+#favorites h3,
 .favorites-cards {
-  padding: 30px;
+  padding: 0px;
+  padding-top: 15px;
 }
-.favorites > h3 {
+#favorites > h3 {
   width: 90vw;
   font-weight: 700;
   text-align: start;
   padding-bottom: 0;
   margin-bottom: 0;
+  margin: 0;
 }
 .favorites-cards {
   display: flex;
   flex-wrap: wrap;
   width: 90vw;
   gap: 20px;
+  padding-bottom: 15px;
 }
 .small-card {
   display: flex;
@@ -281,6 +284,7 @@ a:active {
   border: 1px solid var(--lines-color);
   border-radius: 5px;
   height: 120px;
+  box-shadow: 0.1px 0.1px 6px 0.1px var(--lines-color);
 }
 .small-card img {
   width: 118px;
@@ -291,7 +295,7 @@ a:active {
 .small-cards-info h3 {
   margin: 0;
   padding: 5px;
-  width: 116px;
+  width: 106px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
