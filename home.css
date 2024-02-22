@@ -250,7 +250,9 @@ a:active {
   padding: 0px 2px 0px 2px;
 }
 #favorites {
-  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100vw;
   background-color: var(--bg_default);
   flex-direction: column;
