@@ -187,8 +187,10 @@ main > h2 {
   border-radius: 7px;
 }
 .card img {
-  max-width: 230px;
-  object-fit: cover;
+  width: 230px;
+  height: 120px;
+  object-fit: fill;
+  border-radius: 7px 7px 0px 0px;
 }
 .card-info {
   width: 230px;
