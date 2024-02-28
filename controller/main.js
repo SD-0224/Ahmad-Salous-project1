@@ -6,7 +6,6 @@ document
   .getElementById("site-name-search")
   .addEventListener("change", async (e) => {
     const input = e.target.value;
-    console.log(input);
     const SearchResults = await applySearchResults(input);
     applyCardData(SearchResults);
   });

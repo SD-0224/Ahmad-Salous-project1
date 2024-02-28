@@ -2,13 +2,8 @@ import { cardData } from "../modules/fetching-cards.js";
 
 async function applyCardData(input = null) {
   const results = document.getElementsByClassName("results")[0];
-  let cards;
-  if (input != null) {
-    cards = input;
-    console.log(cards);
-  } else {
-    cards = await cardData();
-  }
+  const cards = input || (await cardData());
+
   results.innerHTML = "";
   cards.forEach((card) => {
     const html = `
