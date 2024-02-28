@@ -2,7 +2,8 @@ import { cardData } from "../modules/fetching-cards.js";
 
 async function applyCardData(input = null) {
   const results = document.getElementsByClassName("results")[0];
-  const cards = input || (await cardData());
+  const allCards = await cardData();
+  const cards = input || allCards;
 
   results.innerHTML = "";
   cards.forEach((card) => {
