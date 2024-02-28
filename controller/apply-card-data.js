@@ -1,10 +1,11 @@
 import { cardData } from "../modules/fetching-cards.js";
 const allCards = await cardData();
+let cards = allCards;
+
 async function applyCardData(input = null) {
+  cards = input || allCards;
   const results = document.getElementsByClassName("results")[0];
   try {
-    const cards = input || allCards;
-
     results.innerHTML = "";
     cards.forEach((card) => {
       const html = `
@@ -35,4 +36,4 @@ async function applyCardData(input = null) {
     results.appendChild(tempContainer);
   }
 }
-export { applyCardData, allCards };
+export { applyCardData, cards };
