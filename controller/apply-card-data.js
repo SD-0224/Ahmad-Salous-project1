@@ -1,13 +1,21 @@
 import { cardData } from "../modules/fetching-cards.js";
-const allCards = await cardData();
-let cards = allCards;
+import { searchResults } from "../modules/search.js";
 
-async function applyCardData(input = null) {
-  cards = input || allCards;
-  const results = document.getElementsByClassName("results")[0];
+const getCardData = async function () {
+  const results = await cardData();
+  return results;
+};
+let allCards = { cardsInfo: await getCardData() };
+
+const applySearchResults = async function (input) {
+  let results = await searchResults(input);
+  allCards.cardsInfo = results;
+};
+async function applyCardData() {
   try {
+    const results = document.getElementsByClassName("results")[0];
     results.innerHTML = "";
-    cards.forEach((card) => {
+    allCards.cardsInfo.forEach((card) => {
       const html = `
             <img src="./Logos/${card.image}" alt="HTML" />
             <div class="card-info">
@@ -36,4 +44,4 @@ async function applyCardData(input = null) {
     results.appendChild(tempContainer);
   }
 }
-export { applyCardData, cards };
+export { applyCardData, allCards, applySearchResults };
