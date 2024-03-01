@@ -1,4 +1,5 @@
 import { allCards } from "./apply-card-data.js";
+import { applyCardData } from "./apply-card-data.js";
 const getCategories = function () {
   const Category = allCards.cardsInfo.map((card) => {
     return card.category;
@@ -17,5 +18,20 @@ const addCategoriesToFilterBy = function () {
   });
 };
 
-const filterCards = function () {};
-export { addCategoriesToFilterBy };
+const filterCards = function (filterAs = null) {
+  if (filterAs === null) {
+    return;
+  }
+  const filteredCards = allCards.cardsInfo.filter((card) => {
+    if (card.category == filterAs) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+  let tempCards = allCards.cardsInfo;
+  allCards.cardsInfo = filteredCards;
+  applyCardData();
+  allCards.cardsInfo = tempCards;
+};
+export { addCategoriesToFilterBy, filterCards };

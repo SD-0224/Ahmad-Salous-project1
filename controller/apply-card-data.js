@@ -44,4 +44,4 @@ async function applyCardData() {
     results.appendChild(tempContainer);
   }
 }
-export { applyCardData, allCards, applySearchResults };
+export { applyCardData, allCards, applySearchResults, getCardData };

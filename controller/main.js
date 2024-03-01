@@ -1,7 +1,9 @@
 import { applyCardData, applySearchResults } from "./apply-card-data.js";
 import { debounce } from "./debounce.js";
-import { sortAuthorName, sortTopicTitle, sortFlag } from "./sortBy.js";
-import { addCategoriesToFilterBy } from "./filterBy.js";
+import { sortData } from "./sortBy.js";
+import { addCategoriesToFilterBy, filterCards } from "./filterBy.js";
+let categoryData = null;
+let sortBy = null;
 applyCardData();
 addCategoriesToFilterBy();
 
@@ -11,18 +13,23 @@ document.getElementById("site-name-search").addEventListener(
     const input = e.target.value;
     await applySearchResults(input);
     applyCardData();
-    if (sortFlag === 1) {
-      sortTopicTitle();
-    } else if (sortFlag === -1) {
-      sortAuthorName();
-    }
+    sortData(sortBy);
+    filterCards(categoryData);
   }, 300)
 );
 
 document
   .getElementsByClassName("browsers")[0]
   .addEventListener("change", (e) => {
-    const selectedItem = e.target.value;
-    if (selectedItem === "Title") sortTopicTitle();
-    if (selectedItem === "Name") sortAuthorName();
+    sortBy = e.target.value;
+    sortData(sortBy);
+    filterCards(categoryData);
+  });
+document
+  .getElementsByClassName("browsers")[1]
+  .addEventListener("change", (e) => {
+    categoryData = e.target.value;
+    sortData(sortBy);
+
+    filterCards(e.target.value);
   });
