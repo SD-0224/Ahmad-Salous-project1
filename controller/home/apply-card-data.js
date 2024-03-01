@@ -1,5 +1,5 @@
-import { cardData } from "../modules/fetching-cards.js";
-import { searchResults } from "../modules/search.js";
+import { cardData } from "../../modules/fetching-cards.js";
+import { searchResults } from "../../modules/search.js";
 
 const getCardData = async function () {
   const results = await cardData();
@@ -17,6 +17,8 @@ async function applyCardData() {
     results.innerHTML = "";
     allCards.cardsInfo.forEach((card) => {
       const html = `
+      <a href = "./Pages/details.html" >
+            <id hidden>${card.id}</id>
             <img src="./Logos/${card.image}" alt="HTML" />
             <div class="card-info">
               <p>Web Development Languages</p>
@@ -29,11 +31,11 @@ async function applyCardData() {
                 <ion-icon name="star-outline"></ion-icon>
               </div>
               <div class="auther">Author: ${card.name}</div>
-            </div>`;
-      const tempContainer = document.createElement("a");
-      tempContainer.setAttribute("href", "./Pages/details.html");
+            </div>
+            </a>`;
+      const tempContainer = document.createElement("div");
+      tempContainer.setAttribute("id", card.id);
       tempContainer.setAttribute("class", "card");
-
       tempContainer.innerHTML = html;
       results.appendChild(tempContainer);
     });

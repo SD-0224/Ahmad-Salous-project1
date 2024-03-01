@@ -71,10 +71,10 @@
           </div>
           <aside>
             <div id="image right-details">
-              <img src="../Logos/html.png" alt="HTML" />
+              <img id="image-container" src="../Logos/html.png" alt="HTML" />
             </div>
             <div id="image-info">
-              <p><b>HTML </b>by <a href="">Sarah Smith</a></p>
+              <p><b>HTML </b>by <a id="authorName" href="">Sarah Smith</a></p>
               <div id="add-to-favorites">
                 <p id="interested">Interested about this topic?</p>
                 <button>
@@ -89,30 +89,6 @@
         <div class="lower-detail">
           <div class="left-detail sub-topics">
             <h2><b>HTML Sub Topics</b></h2>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML syntax and structure</p>
-            </div>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML elements and attributes</p>
-            </div>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML forms and input elements</p>
-            </div>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML tables and lists</p>
-            </div>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML multimedia elements (audio, video, images)</p>
-            </div>
-            <div class="topic">
-              <ion-icon name="checkmark-circle-outline"></ion-icon>
-              <p>HTML accessibility and semantic markup</p>
-            </div>
           </div>
         </div>
       </article>
@@ -152,7 +128,9 @@
         </div>
       </div>
     </div>
+    <script type="module" src="../controller/details/main-details.js"></script>
   </body>
+
   <script>
     let favoritesSwitch = 1;
     document.getElementById("get-favorites").addEventListener("click", () => {

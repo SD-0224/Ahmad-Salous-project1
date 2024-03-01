@@ -33,3 +33,8 @@ document
 
     filterCards(e.target.value);
   });
+document.querySelectorAll(".card").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    localStorage.setItem("id", e.currentTarget.id);
+  });
+});
