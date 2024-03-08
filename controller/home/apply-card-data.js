@@ -17,7 +17,7 @@ async function applyCardData() {
     results.innerHTML = "";
     allCards.cardsInfo.forEach((card) => {
       const html = `
-      <a href = "./Pages/details.html" >
+      <a href = "./Pages/details.html?id=${card.id}" >
             <id hidden>${card.id}</id>
             <img src="./Logos/${card.image}" alt="HTML" />
             <div class="card-info">

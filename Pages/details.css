@@ -252,3 +252,6 @@ article {
     height: 450px;
   }
 }
+#add-to-favorites-button {
+  position: relative;
+}
