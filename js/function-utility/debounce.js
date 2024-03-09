@@ -1,4 +1,4 @@
-function debounce(func, delay) {
+export function debounce(func, delay) {
   let timeoutId;
   return function () {
     const context = this;
@@ -9,4 +9,3 @@ function debounce(func, delay) {
     }, delay);
   };
 }
-export { debounce };

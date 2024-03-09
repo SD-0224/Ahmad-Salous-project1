@@ -1,7 +1,7 @@
-import { GET_DETAILS_DATA } from "../../modules/fetch-details.js";
+import { fetchDetailsData } from "../fetching/fetching-details.js";
 
-const APPLY_DETAILS_DATA = async function () {
-  const DETAILS_DATA = await GET_DETAILS_DATA();
+export const showDetails = async function () {
+  const DETAILS_DATA = await fetchDetailsData();
   let id = DETAILS_DATA.id;
   let category = document.getElementById("title");
   let name = document.getElementById("authorName");
@@ -29,5 +29,3 @@ const APPLY_DETAILS_DATA = async function () {
     subtopics.appendChild(subtopicsDiv);
   });
 };
-
-export { APPLY_DETAILS_DATA };
